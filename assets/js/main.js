@@ -13,21 +13,32 @@ var babyDiscount = ((price / 100) * 20).toFixed(2);
 console.log(babyDiscount);
 var totBaby = price - babyDiscount;
 console.log(totBaby);
+var grannyDiscount = ((price / 100) * 40).toFixed(2);
+console.log(grannyDiscount);
 var totGranny = price - grannyDiscount;
 console.log(totGranny);
-var grannyDiscount = ((price / 100) * 40).toFixed(2)
-console.log(grannyDiscount);
-var noDiscount = "Non hai diritto a nessuno sconto"
+var noDiscount = "Non hai diritto ad alcun sconto"
 //va applicato uno sconto del 20% per i minorenni
+
 if (howOldAreYou <= 17) {
+    document.getElementById("minorenni").innerHTML = totBaby;
+    console.log(totBaby);
+} else if (howOldAreYou >= 65) {
+    document.getElementById("granny").innerHTML = totGranny;
+} else (howOldAreYou >= 18 && howOldAreYou <= 64) {
+    document.getElementById("nodiscount").innerHTML = noDiscount;
+}
+
+
+
+//va applicato uno sconto del 40% per gli over 65.
+
+
+/* if (howOldAreYou <= 17) {
     document.getElementById("minorenne").innerHTML = totBaby;
     console.log(totBaby);
 } else if (howOldAreYou >= 65) {
     document.getElementById("granny").innerHTML = totGranny;
     console.log(totGranny);
 } else (howOldAreYou >= 18 && howOldAreYou <= 64);
-    noDiscount
-
-
-//va applicato uno sconto del 40% per gli over 65.
-
+    noDiscount */
