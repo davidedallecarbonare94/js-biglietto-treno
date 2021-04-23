@@ -11,26 +11,22 @@ console.log(price);
 /* calcolo dello sconto in base all'età */
 var babyDiscount = ((price / 100) * 20).toFixed(2);
 console.log(babyDiscount);
-var totBaby = price - babyDiscount;
+var totBaby = (price - babyDiscount).toFixed(2);
 console.log(totBaby);
 var grannyDiscount = ((price / 100) * 40).toFixed(2);
 console.log(grannyDiscount);
-var totGranny = price - grannyDiscount;
+var totGranny = (price - grannyDiscount).toFixed(2);
 console.log(totGranny);
-var noDiscount = "Non hai diritto ad alcun sconto"
-//va applicato uno sconto del 20% per i minorenni
+var noDiscount = "Non hai diritto ad alcun sconto";
 
 if (howOldAreYou <= 17) {
-    document.getElementById("minorenni").innerHTML = totBaby;
+    document.getElementById("minorenne").innerHTML = totBaby;
     console.log(totBaby);
 } else if (howOldAreYou >= 65) {
     document.getElementById("granny").innerHTML = totGranny;
-} else (howOldAreYou >= 18 && howOldAreYou <= 64) {
+} else (howOldAreYou >= 18) && (howOldAreYou <= 64) {
     document.getElementById("nodiscount").innerHTML = noDiscount;
 }
-
-
-
 //va applicato uno sconto del 40% per gli over 65.
 
 
