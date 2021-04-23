@@ -18,15 +18,17 @@ console.log(grannyDiscount);
 var totGranny = (price - grannyDiscount).toFixed(2);
 console.log(totGranny);
 var noDiscount = "Non hai diritto ad alcun sconto";
+var insertANumber = "Devi inserire un numero"
 
 if (howOldAreYou <= 17) {
     document.getElementById("minorenne").innerHTML = totBaby;
     console.log(totBaby);
 } else if (howOldAreYou >= 65) {
     document.getElementById("granny").innerHTML = totGranny;
-} else (howOldAreYou >= 18) && (howOldAreYou <= 64) {
-    document.getElementById("nodiscount").innerHTML = noDiscount;
+} else if (howOldAreYou >= 18 && howOldAreYou <= 64) {
+    alert(noDiscount)
 }
+
 //va applicato uno sconto del 40% per gli over 65.
 
 
